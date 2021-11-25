@@ -2,13 +2,13 @@
 include "utils.i"
 ?>
 
-    <?php
-    start_page();
-    ?>
+<?php
+start_page();
+?>
 
-    <?php
-        $operateurs = ["+","-","*","/"];
-    ?>
+<?php
+    $operateurs = ["+","-","*","/"];
+?>
     <form action="/calculator.php" method="GET">
         <div style="display: flex; justify-content: space-between;">
             <label for="num_1">First Operand</label>
