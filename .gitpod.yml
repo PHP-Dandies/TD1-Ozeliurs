@@ -2,5 +2,5 @@ ports:
 - port: 8080
   onOpen: open-preview
 tasks:
-- init: LAMP
-  command: docker run -p "80:80" -v ${PWD}/www:/app mattrayner/lamp:latest-2004-php8
+- name: LAMP
+  init: docker run -p "80:80" -v ${PWD}/www:/app mattrayner/lamp:latest-2004-php8
