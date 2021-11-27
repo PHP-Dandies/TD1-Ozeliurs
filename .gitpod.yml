@@ -1,10 +1,6 @@
-image:
-  file: .gitpod.dockerfile
-  context: nginx
 ports:
-- port: 8080
+- port: 80
   onOpen: open-preview
 tasks:
-- name: Nginx
-  command: >
-    nginx
+- name: LAMP
+  command: docker run -p "80:80" -v ${PWD}/www:/app mattrayner/lamp:latest-2004-php8
