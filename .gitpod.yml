@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.dockerfile
+  context: nginx
+ports:
+- port: 8080
+  onOpen: open-preview
+tasks:
+- name: Terminal
+  command: >
+    echo ""
+- name: Nginx
+  command: >
+    nginx &&
+    multitail /var/log/nginx/access.log -I /var/log/nginx/error.log
